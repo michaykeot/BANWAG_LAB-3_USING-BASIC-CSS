@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Michelle's Portfolio</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(0, 6%, 68%);
+            color: #0c0c0c;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: hsl(0, 6%, 68%);
+            padding: 10px;
+            text-align:right
+        }
+
+        nav a {
+            color: #0f0101;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            color: #084848;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        #photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #photos a {
+            flex: 1;
+            text-align: center;
+        }
+
+        #photos img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #photos img:hover {
+            transform: scale(1.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        .profile-photo {
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%;
+            margin-right: 10px; 
+        }
+
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+    </nav>
+<hr>
+    <div class="container">
+        <header>
+            <img src="Images/lovit (1).png" alt="Your Photo" class="profile-photo">
+            <h1>BANWAG, MICHELLE ALIPAYO</h1>
+            <h4>(<span style="color: rgb(142, 103, 103);"> Michelle's Portfolio </span>)</h4>
+        </header>
+        <hr>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am passionate about creative multimedia and love using visuals to tell stories. 
+                My skills include making captivating videos using CapCut and constructing interactive web pages to display my work. 
+                I'm currently improving my ability to code in HTML and have a solid understanding of design principles. 
+                What motivates me? Learning new things and participating in innovative projects as part of a team.<br>
+            </p>
+        </section>
+
+        <section id="photos">
+            <a href="Images/IMAGE7.jpg" target="_blank">
+                <img src="Images/IMAGE7.jpg" alt="Photo 2">
+            </a>
+            <a href="Images/IMAGE8 (1).jpg" target="_blank">
+                <img src="Images/IMAGE8 (1).jpg" alt="Photo 1">
+            </a>
+            <a href="Images/IMAGE5 (1).jpg" target="_blank">
+                <img src="Images/IMAGE5 (1).jpg" alt="Photo 2">
+            </a>
+        </section>
+
+        <section id="photos">
+            <a href="Images/IMAGE3 (1).jpg" target="_blank">
+                <img src="Images/IMAGE3 (1).jpg" alt="Photo 2">
+            </a>
+            <a href="Images/IMAGE2 (1).jpg" target="_blank">
+                <img src="Images/IMAGE2 (1).jpg" alt="Photo 1">
+            </a>
+            <a href="Images/IMAGE1.jpg" target="_blank">
+                <img src="Images/IMAGE1.jpg" alt="Photo 2">
+            </a>
+        </section>
+        
+        <hr>
+        <section id="projects">
+            <h2>Projects in HTML</h2>
+    <ul>
+        <li>
+            <a href="https://michellebanwag.my.canva.site/portfolio">Canva Portfolio</a>
+            
+        </li>
+        
+        <li>
+            <a href="https://michaykeot.github.io/Headings/">Headings in HTML</a>
+        </li>
+
+        <li>
+            <h5>OL & UL in HTML</h5>
+            
+            <ol type="1">
+                <li>
+                    <a href="https://michaykeot.github.io/Favoritedish-banwag/">How to make my favorite dish</a>
+                </li>
+                <li>
+                    <a href="https://michaykeot.github.io/OL-UL-Implementation/">OL & UL implementation</a>
+                </li>
+            </ol>
+        </li>
+
+        <li>
+            <a href="https://michaykeot.github.io/filepath-banwag/">File Path in HTML</a>
+        </li>
+    </ul>
+
+
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
